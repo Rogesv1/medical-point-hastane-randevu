@@ -31,6 +31,8 @@ Hasta, doktor ve sekreter olmak üzere üç farklı kullanıcı rolü vardır.
 1. **Veritabanını oluşturun.** SQL Server Management Studio'da
    [`Veritabani/01_VeritabaniKurulum.sql`](Veritabani/01_VeritabaniKurulum.sql) dosyasını açıp çalıştırın (F5).
    Tablolar ve deneme verileri oluşur.
+   İsterseniz ardından [`Veritabani/03_OrnekVeriler.sql`](Veritabani/03_OrnekVeriler.sql) ile
+   örnek doktor, hasta, duyuru ve randevuları da ekleyin (tekrar çalıştırmak güvenlidir, aynı kayıt iki kez eklenmez).
 2. **Bağlantı ayarını kontrol edin.** [`Proje_Hastane/App.config`](Proje_Hastane/App.config) içindeki
    `Data Source=.\SQLEXPRESS` değeri, bilgisayarınızdaki SQL Server adıyla aynı olmalı.
 3. `Proje_Hastane.slnx` dosyasını Visual Studio ile açıp çalıştırın (F5).
@@ -42,6 +44,23 @@ Deneme verileriyle giriş bilgileri (şifre hepsinde `1234`):
 | Doktor   | 22222222222   |
 | Sekreter | 44444444444   |
 | Hasta    | Kayıt ekranından yeni hesap açın |
+
+`03_OrnekVeriler.sql` çalıştırıldıysa (şifre hepsinde `1234`):
+
+| Rol      | TC kimlik no  | Kim |
+|----------|---------------|-----|
+| Hasta    | 44444444401   | Ahmet Yılmaz (geçmiş ve ileri tarihli randevuları var) |
+| Hasta    | 44444444402   | Zeynep Arslan |
+| Doktor   | 22222222204   | Kemal Arslan, Kardiyoloji |
+| Doktor   | 22222222203   | Elif Şahin, Dahiliye |
+| Sekreter | 55555555501   | Hakan Yurt |
+
+## Arayüz
+
+Tüm formların görünümü tek bir sınıftan, [`Proje_Hastane/Tema.cs`](Proje_Hastane/Tema.cs) dosyasından gelir.
+Her form açılırken `Tema.Uygula(this)` çağırır; renkler, yazı tipi, kart görünümlü bölümler,
+yuvarlak köşeli düğme ve kutular, tablo stili burada tanımlıdır. Görünümü değiştirmek için
+sadece bu dosyayı düzenlemek yeterlidir.
 
 ## Veritabanı
 

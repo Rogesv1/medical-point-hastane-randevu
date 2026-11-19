@@ -162,9 +162,9 @@
             // 
             // btnBilgiDuzenle
             // 
-            this.btnBilgiDuzenle.Location = new System.Drawing.Point(16, 23);
+            this.btnBilgiDuzenle.Location = new System.Drawing.Point(14, 24);
             this.btnBilgiDuzenle.Name = "btnBilgiDuzenle";
-            this.btnBilgiDuzenle.Size = new System.Drawing.Size(76, 29);
+            this.btnBilgiDuzenle.Size = new System.Drawing.Size(108, 30);
             this.btnBilgiDuzenle.TabIndex = 0;
             this.btnBilgiDuzenle.Text = "Bilgi Düzenle";
             this.btnBilgiDuzenle.UseVisualStyleBackColor = true;
@@ -172,9 +172,9 @@
             // 
             // btnDuyurular
             // 
-            this.btnDuyurular.Location = new System.Drawing.Point(134, 23);
+            this.btnDuyurular.Location = new System.Drawing.Point(126, 24);
             this.btnDuyurular.Name = "btnDuyurular";
-            this.btnDuyurular.Size = new System.Drawing.Size(82, 29);
+            this.btnDuyurular.Size = new System.Drawing.Size(108, 30);
             this.btnDuyurular.TabIndex = 1;
             this.btnDuyurular.Text = "Duyurular";
             this.btnDuyurular.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(258, 21);
+            this.btnCikis.Location = new System.Drawing.Point(238, 24);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(75, 33);
+            this.btnCikis.Size = new System.Drawing.Size(108, 30);
             this.btnCikis.TabIndex = 2;
             this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = true;

@@ -159,3 +159,18 @@ Kodda ilgili yerlerde de açıklama satırları (yorumlar) bulunur.
   Test gerçek veritabanında bir transaction içinde çalıştırılıp sonunda geri alındı (ROLLBACK).
 - **Arayüz:** Windows UI Automation ile otomatik olarak düğmelere basıldı: üç giriş penceresinin açılıp kapanması,
   boş alanla girişte uyarı mesajı ve ana pencere kapanınca uygulamanın tamamen kapanması doğrulandı.
+- **Uçtan uca arayüz testi (58 kontrol):** Formlar açılıp gerçek düğmelere basıldı, çıkan mesaj kutuları
+  otomatik okunup kapatıldı ve her adımın sonucu veritabanından kontrol edildi:
+  sekreterin doktor/branş eklemesi-güncellemesi-silmesi, randevu oluşturup listeden seçerek güncellemesi, duyuru;
+  hastanın kayıt olması, randevuyu görüp alması, aynı randevuyu ikinci kez alamaması, bilgilerini düzenlemesi;
+  doktorun kendi randevularını ve şikayeti görmesi, adını değiştirince randevularının kaybolmaması;
+  pencereler kapanınca rol ekranına dönülmesi. Test kayıtları sonunda silindi.
+
+## 7. Sonradan bulunan hatalar
+
+- **Doktor bulunamayınca "@p1 parametresi verilmedi" hatası:** Doktor kaydı bulunamazsa ad soyad `null` kalıyordu.
+  ADO.NET, değeri `null` olan parametreyi "hiç verilmemiş" sayar. Artık boş metin gönderiliyor (`doktorAdSoyad ?? ""`).
+  Veritabanında boş değer saklamak gerekirse `null` yerine `DBNull.Value` kullanılır.
+- **Bağlantı ayarı okunamazsa anlaşılmaz hata:** `ConnectionStrings["HastaneProje"]` null dönünce
+  "Nesne başvurusu bir nesnenin örneğine ayarlanmadı" hatası çıkıyordu. Artık ne yapılacağını söyleyen bir mesaj var.
+  Genel hata penceresi de hatanın hangi form ve metotta çıktığını gösteriyor.
