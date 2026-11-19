@@ -110,15 +110,5 @@ namespace Proje_Hastane.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2026_11_07_at_17_12_16_upscayl_5x_upscayl_standard_4x {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2026-11-07 at 17.12.16_upscayl_5x_upscayl-standard-4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

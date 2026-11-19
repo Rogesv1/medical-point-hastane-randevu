@@ -201,9 +201,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WhatsApp Image 2026-11-07 at 17.12.16_upscayl_5x_upscayl-standard-4x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\png-transparent-computer-icons-user-icon-design-patient-miscellaneous-balance-symbol.png" />
   </ItemGroup>
   <ItemGroup>

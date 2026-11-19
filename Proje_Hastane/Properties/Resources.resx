@@ -127,9 +127,6 @@
   <data name="hastaicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hastaicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhatsApp Image 2026-11-07 at 17.12.16_upscayl_5x_upscayl-standard-4x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2026-11-07 at 17.12.16_upscayl_5x_upscayl-standard-4x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="forbidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forbidden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
