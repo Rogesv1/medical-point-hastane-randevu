@@ -242,8 +242,12 @@ namespace Proje_Hastane
             g.BackColor = Kart;          // içindeki etiketler de beyaz zemini alır
             g.ForeColor = BirincilKoyu;
             g.Font = KalinYazi;
-            // Üst boşluk: kutuyu dolduran (Dock = Fill) tablolar başlık yazısının altında başlasın
-            g.Padding = new Padding(8, 14, 8, 10);
+            // Üst boşluk: kutuyu dolduran (Dock = Fill) tablolar başlık yazısının altında başlasın.
+            // DİKKAT: Padding'i sadece dolduran bir kontrol varsa değiştiriyoruz. WinForms, üste sabitlenmiş
+            // (varsayılan) kontrolleri Padding'e göre konumlar; her GroupBox'ta değiştirince içindeki
+            // bütün etiket ve düğmeler 11 piksel aşağı kayıyordu.
+            if (g.Controls.Cast<Control>().Any(k => k.Dock != DockStyle.None))
+                g.Padding = new Padding(8, 14, 8, 10);
             g.Paint += KartCiz;
         }
 
