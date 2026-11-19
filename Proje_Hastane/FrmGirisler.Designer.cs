@@ -124,7 +124,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmGirisler";
-            this.Text = "MedPoint";
+            this.Text = "Medical Point";
             this.ResumeLayout(false);
             this.PerformLayout();
 

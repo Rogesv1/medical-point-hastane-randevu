@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proje_Hastane
@@ -17,27 +10,29 @@ namespace Proje_Hastane
             InitializeComponent();
         }
 
-       
+        // Açılan giriş penceresi kapanınca bu ekran (rol seçimi) geri gelir.
+        // Eskiden pencere gizlenip bir daha gösterilmiyordu; son pencere kapatılsa bile
+        // uygulama arka planda açık kalıyordu.
+        private void GirisFormunuAc(Form girisFormu)
+        {
+            girisFormu.FormClosed += (s, args) => this.Show();
+            girisFormu.Show();
+            this.Hide();
+        }
 
         private void btnHastaGiris_Click(object sender, EventArgs e)
         {
-            FrmHastaGiris fr=new FrmHastaGiris();
-            fr.Show();
-            this.Hide();
+            GirisFormunuAc(new FrmHastaGiris());
         }
 
         private void btnDoktorGiris_Click(object sender, EventArgs e)
         {
-            FrmDoktorGiris frdk= new FrmDoktorGiris();
-            frdk.Show();
-            this.Hide();
+            GirisFormunuAc(new FrmDoktorGiris());
         }
 
         private void btnSekreterGrisi_Click(object sender, EventArgs e)
         {
-            FrmSekreterGiris frsk =new FrmSekreterGiris();
-            frsk.Show();
-            this.Hide();
+            GirisFormunuAc(new FrmSekreterGiris());
         }
     }
 }
