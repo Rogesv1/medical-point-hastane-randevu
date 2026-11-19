@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Proje_Hastane
@@ -16,7 +14,18 @@ namespace Proje_Hastane
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Beklenmeyen bir hata olursa (ör. veritabanına ulaşılamazsa) uygulama kapanıp gitmesin,
+            // kullanıcıya anlaşılır bir mesaj gösterilsin.
+            Application.ThreadException += BeklenmeyenHata;
+
             Application.Run(new FrmGirisler());
+        }
+
+        static void BeklenmeyenHata(object sender, ThreadExceptionEventArgs e)
+        {
+            MessageBox.Show("İşlem sırasında bir hata oluştu:\n\n" + e.Exception.Message,
+                "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
