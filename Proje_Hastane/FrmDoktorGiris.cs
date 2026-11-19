@@ -9,6 +9,8 @@ namespace Proje_Hastane
         public FrmDoktorGiris()
         {
             InitializeComponent();
+            Tema.Uygula(this);
+            Tema.Baslik(label1);
         }
 
         sqlbaglanti bgl = new sqlbaglanti();

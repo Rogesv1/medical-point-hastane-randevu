@@ -8,6 +8,10 @@ namespace Proje_Hastane
         public FrmGirisler()
         {
             InitializeComponent();
+            Tema.Uygula(this);
+            Tema.Baslik(label4);
+            label1.Font = label2.Font = label3.Font = Tema.KalinYazi;
+            label1.ForeColor = label2.ForeColor = label3.ForeColor = Tema.Metin;
         }
 
         // Açılan giriş penceresi kapanınca bu ekran (rol seçimi) geri gelir.

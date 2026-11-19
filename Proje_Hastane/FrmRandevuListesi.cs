@@ -10,6 +10,7 @@ namespace Proje_Hastane
         public FrmRandevuListesi()
         {
             InitializeComponent();
+            Tema.Uygula(this);
         }
 
         sqlbaglanti bgl = new sqlbaglanti();

@@ -9,6 +9,7 @@ namespace Proje_Hastane
         public FrmHastaKayit()
         {
             InitializeComponent();
+            Tema.Uygula(this);
         }
 
         sqlbaglanti bgl = new sqlbaglanti();

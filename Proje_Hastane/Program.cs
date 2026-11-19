@@ -24,7 +24,13 @@ namespace Proje_Hastane
 
         static void BeklenmeyenHata(object sender, ThreadExceptionEventArgs e)
         {
-            MessageBox.Show("İşlem sırasında bir hata oluştu:\n\n" + e.Exception.Message,
+            // Hatanın hangi formda ve hangi metotta çıktığını da gösteriyoruz; hata bildiren kişi
+            // bu bilgiyi verirse sorunun yeri hemen bulunur.
+            string yer = e.Exception.TargetSite != null
+                ? e.Exception.TargetSite.DeclaringType.Name + "." + e.Exception.TargetSite.Name
+                : "bilinmiyor";
+            MessageBox.Show("İşlem sırasında bir hata oluştu:\n\n" + e.Exception.Message +
+                "\n\nYer: " + yer,
                 "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }

@@ -10,6 +10,7 @@ namespace Proje_Hastane
         public FrmHastaDetay()
         {
             InitializeComponent();
+            Tema.Uygula(this);
         }
 
         public string tc;

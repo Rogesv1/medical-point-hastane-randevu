@@ -9,6 +9,7 @@ namespace Proje_Hastane
         public FrmDoktorBilgiDuzenle()
         {
             InitializeComponent();
+            Tema.Uygula(this);
         }
 
         public string TCNO;

@@ -10,6 +10,12 @@ namespace Proje_Hastane
         public FrmSekreterDetay()
         {
             InitializeComponent();
+            Tema.Uygula(this);
+            Tema.IkincilDugme(btnGuncelle);
+            Tema.IkincilDugme(btnRandevuPanel);
+            Tema.IkincilDugme(btnBransPanel);
+            Tema.IkincilDugme(btnDoktorPanel);
+            Tema.IkincilDugme(btnDuyurular);
         }
 
         public string tcnumara;

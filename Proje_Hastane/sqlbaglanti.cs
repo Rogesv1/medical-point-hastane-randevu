@@ -19,7 +19,17 @@ namespace Proje_Hastane
     {
         public SqlConnection baglanti()
         {
-            string baglantiMetni = ConfigurationManager.ConnectionStrings["HastaneProje"].ConnectionString;
+            // App.config okunamazsa ConnectionStrings["HastaneProje"] null döner ve .ConnectionString
+            // "Nesne başvurusu bir nesnenin örneğine ayarlanmadı" hatası verir. Bunun yerine ne yapılması
+            // gerektiğini söyleyen bir hata fırlatıyoruz.
+            ConnectionStringSettings ayar = ConfigurationManager.ConnectionStrings["HastaneProje"];
+            if (ayar == null)
+            {
+                throw new ConfigurationErrorsException(
+                    "Veritabanı bağlantı ayarı bulunamadı. Programın yanında \"Proje_Hastane.exe.config\" " +
+                    "dosyası olmalı (Visual Studio bunu App.config'ten otomatik oluşturur).");
+            }
+            string baglantiMetni = ayar.ConnectionString;
             SqlConnection baglan = new SqlConnection(baglantiMetni);
             baglan.Open();
             return baglan;

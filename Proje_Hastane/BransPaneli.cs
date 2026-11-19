@@ -10,6 +10,9 @@ namespace Proje_Hastane
         public BransPaneli()
         {
             InitializeComponent();
+            Tema.Uygula(this);
+            Tema.TehlikeDugme(btnSil);
+            Tema.IkincilDugme(btnGuncelle);
         }
 
         sqlbaglanti bgl = new sqlbaglanti();

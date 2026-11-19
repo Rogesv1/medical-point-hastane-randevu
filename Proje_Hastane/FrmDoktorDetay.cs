@@ -10,6 +10,10 @@ namespace Proje_Hastane
         public FrmDoktorDetay()
         {
             InitializeComponent();
+            Tema.Uygula(this);
+            Tema.IkincilDugme(btnBilgiDuzenle);
+            Tema.IkincilDugme(btnDuyurular);
+            Tema.TehlikeDugme(btnCikis);
         }
 
         public string TC;          // giriş ekranından gelen doktor TC'si
@@ -45,7 +49,9 @@ namespace Proje_Hastane
             using (SqlConnection baglanti = bgl.baglanti())
             using (SqlDataAdapter da = new SqlDataAdapter("Select * From Tbl_Randevular where RandevuDoktor=@p1", baglanti))
             {
-                da.SelectCommand.Parameters.AddWithValue("@p1", doktorAdSoyad);
+                // Doktor bulunamazsa doktorAdSoyad null kalır. Değeri null olan parametre ADO.NET'e
+                // "hiç verilmemiş" sayılır ve "expects the parameter '@p1'" hatası çıkar; boş metin gönderiyoruz.
+                da.SelectCommand.Parameters.AddWithValue("@p1", doktorAdSoyad ?? "");
                 da.Fill(dt);
             }
             dataGridView1.DataSource = dt;

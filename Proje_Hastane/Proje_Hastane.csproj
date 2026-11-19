@@ -134,6 +134,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlbaglanti.cs" />
+    <Compile Include="Tema.cs" />
     <EmbeddedResource Include="BransPaneli.resx">
       <DependentUpon>BransPaneli.cs</DependentUpon>
     </EmbeddedResource>
