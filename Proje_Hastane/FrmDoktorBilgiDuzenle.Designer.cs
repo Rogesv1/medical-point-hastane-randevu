@@ -47,6 +47,7 @@
             this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuncelle.Location = new System.Drawing.Point(206, 282);
             this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             this.btnGuncelle.Size = new System.Drawing.Size(131, 33);
             this.btnGuncelle.TabIndex = 45;
             this.btnGuncelle.Text = "Güncelle";
@@ -67,7 +68,6 @@
             this.label4.Size = new System.Drawing.Size(60, 19);
             this.label4.TabIndex = 39;
             this.label4.Text = "Soyad:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtAd
             // 
@@ -156,7 +156,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgilerini Düzenle";
             this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
