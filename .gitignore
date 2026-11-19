@@ -1,0 +1,9 @@
+# Visual Studio derleme çıktıları ve kullanıcıya özel dosyalar
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Kullanılmayan, çok büyük (37 MB) görsel — GitHub'a yüklenmeden önce karar verilecek
+Proje_Hastane/Resources/WhatsApp Image*.png
