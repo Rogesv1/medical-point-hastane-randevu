@@ -148,7 +148,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(267, 184);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // groupBox3
             // 
@@ -173,12 +172,12 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Paneli";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.Location = new System.Drawing.Point(45, 332);
             this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             this.btnGuncelle.Size = new System.Drawing.Size(203, 34);
             this.btnGuncelle.TabIndex = 15;
             this.btnGuncelle.Text = "Güncelle";
@@ -220,13 +219,13 @@
             this.cmbDoktorlar.Name = "cmbDoktorlar";
             this.cmbDoktorlar.Size = new System.Drawing.Size(128, 27);
             this.cmbDoktorlar.TabIndex = 11;
-            this.cmbDoktorlar.SelectedIndexChanged += new System.EventHandler(this.cmbDoktorlar_SelectedIndexChanged);
             // 
             // cmbBrans
             // 
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(120, 150);
             this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             this.cmbBrans.Size = new System.Drawing.Size(128, 27);
             this.cmbBrans.TabIndex = 10;
             // 
@@ -422,7 +421,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSekreterDetay";
-            this.Text = "FrmSekreterDetay";
+            this.Text = "Sekreter Paneli";
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

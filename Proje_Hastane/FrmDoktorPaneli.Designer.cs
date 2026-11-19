@@ -38,10 +38,10 @@
             this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,15 +131,15 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Şifre:";
             // 
-            // button1
+            // btnEkle
             // 
-            this.button1.Location = new System.Drawing.Point(128, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 32);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEkle.Location = new System.Drawing.Point(128, 282);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(142, 32);
+            this.btnEkle.TabIndex = 11;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dataGridView1
             // 
@@ -152,23 +152,25 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button2
+            // btnSil
             // 
-            this.button2.Location = new System.Drawing.Point(128, 320);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 32);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Sil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSil.Location = new System.Drawing.Point(128, 320);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            this.btnSil.Size = new System.Drawing.Size(142, 32);
+            this.btnSil.TabIndex = 13;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnGuncelle
             // 
-            this.button3.Location = new System.Drawing.Point(128, 358);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 32);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Location = new System.Drawing.Point(128, 358);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            this.btnGuncelle.Size = new System.Drawing.Size(142, 32);
+            this.btnGuncelle.TabIndex = 14;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // FrmDoktorPaneli
             // 
@@ -176,10 +178,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1000, 534);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.mskTc);
             this.Controls.Add(this.cmbBrans);
@@ -193,7 +195,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDoktorPaneli";
-            this.Text = "FrmDoktorPaneli";
+            this.Text = "Doktor Yönetimi";
             this.Load += new System.EventHandler(this.FrmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -213,9 +215,9 @@
         private System.Windows.Forms.ComboBox cmbBrans;
         private System.Windows.Forms.MaskedTextBox mskTc;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }

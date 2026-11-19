@@ -53,7 +53,7 @@
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRandevuListesi";
-            this.Text = "FrmRandevuListesi";
+            this.Text = "Randevu Listesi";
             this.Load += new System.EventHandler(this.FrmRandevuListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

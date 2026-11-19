@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.txtBransAd = new System.Windows.Forms.TextBox();
+            this.txtBransId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnGuncelle
             // 
-            this.button3.Location = new System.Drawing.Point(103, 289);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 38);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnGuncelle.Location = new System.Drawing.Point(103, 289);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(178, 38);
+            this.btnGuncelle.TabIndex = 28;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // button2
+            // btnSil
             // 
-            this.button2.Location = new System.Drawing.Point(103, 244);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 38);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Sil";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSil.Location = new System.Drawing.Point(103, 244);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(178, 38);
+            this.btnSil.TabIndex = 27;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // dataGridView1
             // 
@@ -74,32 +74,32 @@
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button1
+            // btnEkle
             // 
-            this.button1.Location = new System.Drawing.Point(103, 198);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 38);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEkle.Location = new System.Drawing.Point(103, 198);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(178, 38);
+            this.btnEkle.TabIndex = 25;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // txtSoyad
+            // txtBransAd
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(103, 151);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(176, 27);
-            this.txtSoyad.TabIndex = 20;
+            this.txtBransAd.Location = new System.Drawing.Point(103, 151);
+            this.txtBransAd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBransAd.Name = "txtBransAd";
+            this.txtBransAd.Size = new System.Drawing.Size(176, 27);
+            this.txtBransAd.TabIndex = 20;
             // 
-            // txtAd
+            // txtBransId
             // 
-            this.txtAd.Location = new System.Drawing.Point(103, 102);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(176, 27);
-            this.txtAd.TabIndex = 19;
+            this.txtBransId.Location = new System.Drawing.Point(103, 102);
+            this.txtBransId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBransId.Name = "txtBransId";
+            this.txtBransId.Size = new System.Drawing.Size(176, 27);
+            this.txtBransId.TabIndex = 19;
             // 
             // label2
             // 
@@ -126,18 +126,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 436);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtSoyad);
-            this.Controls.Add(this.txtAd);
+            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.txtBransAd);
+            this.Controls.Add(this.txtBransId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BransPaneli";
-            this.Text = "BransPaneli";
+            this.Text = "Branş Yönetimi";
             this.Load += new System.EventHandler(this.BransPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -147,12 +147,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtSoyad;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.TextBox txtBransAd;
+        private System.Windows.Forms.TextBox txtBransId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

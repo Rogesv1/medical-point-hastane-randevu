@@ -30,7 +30,7 @@
         {
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGirisYap = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             // 
             this.txtSifre.Location = new System.Drawing.Point(296, 188);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(131, 27);
             this.txtSifre.TabIndex = 11;
             // 
@@ -52,15 +53,15 @@
             this.mskTc.Size = new System.Drawing.Size(131, 27);
             this.mskTc.TabIndex = 10;
             // 
-            // button1
+            // btnGirisYap
             // 
-            this.button1.Location = new System.Drawing.Point(296, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 32);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Giriş Yap";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGirisYap.Location = new System.Drawing.Point(296, 239);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(131, 32);
+            this.btnGirisYap.TabIndex = 9;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // label3
             // 
@@ -98,13 +99,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.mskTc);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSekreterGiris";
-            this.Text = "FrmSekreter";
+            this.Text = "Sekreter Girişi";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +115,7 @@
 
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.MaskedTextBox mskTc;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
