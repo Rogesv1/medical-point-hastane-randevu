@@ -73,11 +73,25 @@ sadece bu dosyayı düzenlemek yeterlidir.
 | `Tbl_Randevular` | Randevular: tarih, saat, branş, doktor, durum (0 = boş, 1 = alındı), hasta TC, şikayet |
 | `Tbl_Duyurular`  | Sekreterin yayınladığı duyurular |
 
-## Geliştirme notları
+## Geliştirme süreci
 
-Projenin ilk sürümünde bulunan hatalar ve nasıl düzeltildikleri
-[`DUZELTMELER.md`](DUZELTMELER.md) dosyasında tek tek anlatılmıştır.
-Commit geçmişi de aynı sırayı izler.
+Bu projeyi ben geliştirdim: veritabanı tasarımı, formlar, ekran düzeni ve uygulamanın
+tüm işleyişi (hasta, doktor ve sekreter tarafı) bana aittir.
+
+Projenin ilk sürümünü tamamladıktan sonra **test, hata ayıklama ve arayüz düzenleme**
+aşamalarında yapay zekâ asistanı **Claude**'dan (Anthropic) destek aldım:
+
+- **Test:** Uygulamanın uçtan uca ve hatalı giriş senaryolarıyla test edilmesi
+- **Hata bulma ve düzeltme:** Kapanmayan veritabanı bağlantıları, SQL injection riski,
+  çalışmayan düğmeler, eksik doğrulamalar gibi sorunların tespiti ve giderilmesi
+- **Arayüz:** Kendi tasarladığım ekranlara yeni alan ya da özellik eklemeden
+  renk, yazı tipi ve düzen açısından daha düzenli bir görünüm kazandırılması
+
+Bulunan her hatayı, nedenini ve nasıl düzeltildiğini öğrenerek ilerledim; hepsi
+[`DUZELTMELER.md`](DUZELTMELER.md) dosyasında **Sorun → Neden → Çözüm → Kavram** düzeninde anlatılmıştır.
+İlk commit projenin düzeltmelerden önceki hâlidir; sonraki commit'lerde her adım ayrı ayrı görülebilir.
+
+## Geliştirme notları
 
 Bilinen sınırlamalar (ileride geliştirilebilir):
 - Şifreler veritabanında düz metin olarak tutuluyor; gerçek bir sistemde hash'lenmeli (ör. PBKDF2 / BCrypt).
