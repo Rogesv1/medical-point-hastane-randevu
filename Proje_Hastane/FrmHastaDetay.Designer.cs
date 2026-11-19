@@ -158,6 +158,7 @@
             // 
             this.rctSikayet.Location = new System.Drawing.Point(108, 148);
             this.rctSikayet.Name = "rctSikayet";
+            this.rctSikayet.MaxLength = 250;
             this.rctSikayet.Size = new System.Drawing.Size(194, 132);
             this.rctSikayet.TabIndex = 2;
             this.rctSikayet.Text = "";
@@ -176,6 +177,7 @@
             this.cmbdoktor.FormattingEnabled = true;
             this.cmbdoktor.Location = new System.Drawing.Point(108, 105);
             this.cmbdoktor.Name = "cmbdoktor";
+            this.cmbdoktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbdoktor.Size = new System.Drawing.Size(194, 27);
             this.cmbdoktor.TabIndex = 6;
             this.cmbdoktor.SelectedIndexChanged += new System.EventHandler(this.cmbdoktor_SelectedIndexChanged);
@@ -194,6 +196,7 @@
             this.cmbbrans.FormattingEnabled = true;
             this.cmbbrans.Location = new System.Drawing.Point(108, 72);
             this.cmbbrans.Name = "cmbbrans";
+            this.cmbbrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbbrans.Size = new System.Drawing.Size(194, 27);
             this.cmbbrans.TabIndex = 3;
             this.cmbbrans.SelectedIndexChanged += new System.EventHandler(this.cmbbrans_SelectedIndexChanged);
@@ -254,6 +257,7 @@
             // 
             this.TXTid.Location = new System.Drawing.Point(108, 39);
             this.TXTid.Name = "TXTid";
+            this.TXTid.ReadOnly = true;
             this.TXTid.Size = new System.Drawing.Size(194, 27);
             this.TXTid.TabIndex = 11;
             // 

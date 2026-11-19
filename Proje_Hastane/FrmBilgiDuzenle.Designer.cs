@@ -72,6 +72,7 @@
             "Kadın"});
             this.cmbCinsiyet.Location = new System.Drawing.Point(230, 294);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
+            this.cmbCinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCinsiyet.Size = new System.Drawing.Size(131, 27);
             this.cmbCinsiyet.TabIndex = 6;
             // 
@@ -97,6 +98,7 @@
             // 
             this.txtSoyad.Location = new System.Drawing.Point(230, 204);
             this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.MaxLength = 15;
             this.txtSoyad.Size = new System.Drawing.Size(131, 27);
             this.txtSoyad.TabIndex = 4;
             // 
@@ -113,6 +115,7 @@
             // 
             this.txtAd.Location = new System.Drawing.Point(230, 164);
             this.txtAd.Name = "txtAd";
+            this.txtAd.MaxLength = 15;
             this.txtAd.Size = new System.Drawing.Size(131, 27);
             this.txtAd.TabIndex = 3;
             // 
@@ -129,6 +132,7 @@
             // 
             this.txtSifre.Location = new System.Drawing.Point(230, 125);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.MaxLength = 15;
             this.txtSifre.Size = new System.Drawing.Size(131, 27);
             this.txtSifre.TabIndex = 2;
             // 

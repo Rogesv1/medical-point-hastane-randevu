@@ -41,6 +41,7 @@
             this.txtSifre.Location = new System.Drawing.Point(285, 235);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.MaxLength = 15;
             this.txtSifre.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(163, 27);
             this.txtSifre.TabIndex = 13;

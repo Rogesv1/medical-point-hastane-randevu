@@ -166,7 +166,27 @@ Kodda ilgili yerlerde de açıklama satırları (yorumlar) bulunur.
   doktorun kendi randevularını ve şikayeti görmesi, adını değiştirince randevularının kaybolmaması;
   pencereler kapanınca rol ekranına dönülmesi. Test kayıtları sonunda silindi.
 
-## 7. Sonradan bulunan hatalar
+## 7. Hatalı girişlere karşı koruma (girdi doğrulama)
+
+Hatalı giriş testinde (yanlış biçimde veri girmek) 22 durumdan 13'ü başarısız oldu. Düzeltmeler:
+
+| Sorun | Çözüm | Kavram |
+|---|---|---|
+| Veritabanı sütunundan uzun metin yazılınca İngilizce "String or binary data would be truncated" hatası | Her kutuya sütun uzunluğu kadar `MaxLength` (ad/soyad/şifre 15, branş 30, duyuru 200, şikayet 250) | Arayüz kuralları veritabanı kurallarıyla uyumlu olmalı |
+| 31.02.2026, 14.31.2432, 25:99 gibi olmayan tarih/saatler kaydediliyordu | `DateTime.TryParseExact` ile gerçek tarih mi diye bakılıyor, yeni randevu geçmiş tarihe açılamıyor. Tarih ve saat her zaman aynı biçimde (`dd.MM.yyyy`, `HH:mm`) kaydediliyor | "Haneler dolu" ≠ "geçerli". Girdiyi ayrıştırarak (parse) doğrulamak |
+| Açılır kutulara elle "Olmayan Doktor", "Uydurma Branş" yazılabiliyordu | Açılır kutular `DropDownList`: sadece listeden seçilebilir | Hatayı kontrol etmek yerine baştan imkânsız kılmak |
+| Aynı doktora aynı tarih ve saatte iki randevu açılabiliyordu | Kaydetmeden önce `Select Count(*)` ile kontrol (güncellemede randevunun kendisi hariç) | İş kuralı doğrulaması |
+| Randevu numarası kutusuna harf yazılınca "'abc' int'e çevrilemedi" hatası | Kutu salt okunur (numara tablodan tıklanınca gelir), ayrıca `int.TryParse` ile kontrol | Kullanıcıya düzenlemesi gerekmeyen alanı açmamak |
+
+Son güvenlik ağı: Uzun metin bir şekilde veritabanına ulaşırsa `Program.cs` içindeki genel hata yakalayıcı
+bu hatayı (SQL hata no 2628 / 8152) tanıyıp Türkçe ve anlaşılır bir uyarı gösterir.
+
+**Not:** `MaxLength` yalnızca kullanıcı yazarken uygulanır; kodla `txtAd.Text = "..."` atanan metni kısaltmaz.
+Bu yüzden testte metin, klavyeden basılmış gibi karakter karakter gönderildi.
+
+**Test:** Hatalı giriş testi 34 kontrolle tekrarlandı, hepsi geçti; uçtan uca test (58) de geçmeye devam ediyor.
+
+## 8. Sonradan bulunan hatalar
 
 - **Doktor bulunamayınca "@p1 parametresi verilmedi" hatası:** Doktor kaydı bulunamazsa ad soyad `null` kalıyordu.
   ADO.NET, değeri `null` olan parametreyi "hiç verilmemiş" sayar. Artık boş metin gönderiliyor (`doktorAdSoyad ?? ""`).

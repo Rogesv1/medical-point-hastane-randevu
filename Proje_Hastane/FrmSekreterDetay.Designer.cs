@@ -145,6 +145,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(19, 26);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Size = new System.Drawing.Size(267, 184);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
@@ -217,6 +218,7 @@
             this.cmbDoktorlar.FormattingEnabled = true;
             this.cmbDoktorlar.Location = new System.Drawing.Point(120, 186);
             this.cmbDoktorlar.Name = "cmbDoktorlar";
+            this.cmbDoktorlar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDoktorlar.Size = new System.Drawing.Size(128, 27);
             this.cmbDoktorlar.TabIndex = 11;
             // 
@@ -225,6 +227,7 @@
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(120, 150);
             this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.cmbBrans_SelectedIndexChanged);
             this.cmbBrans.Size = new System.Drawing.Size(128, 27);
             this.cmbBrans.TabIndex = 10;
@@ -251,6 +254,7 @@
             // 
             this.txtİd.Location = new System.Drawing.Point(120, 40);
             this.txtİd.Name = "txtİd";
+            this.txtİd.ReadOnly = true;
             this.txtİd.Size = new System.Drawing.Size(128, 27);
             this.txtİd.TabIndex = 7;
             // 

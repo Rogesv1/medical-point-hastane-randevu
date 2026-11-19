@@ -122,7 +122,9 @@ namespace Proje_Hastane
 
         private void btnRandevuAl_Click(object sender, EventArgs e)
         {
-            if (TXTid.Text == "")
+            // Numara kutusu salt okunur ve tablodan tıklanınca doluyor; yine de sayı değilse sorguya göndermiyoruz
+            // (eskiden harf yazılınca "'abc' int'e çevrilemedi" veritabanı hatası çıkıyordu).
+            if (!int.TryParse(TXTid.Text, out int randevuNo))
             {
                 MessageBox.Show("Önce aktif randevular listesinden bir randevu seçin.");
                 return;
@@ -136,7 +138,7 @@ namespace Proje_Hastane
             {
                 komut.Parameters.AddWithValue("@p1", tc);
                 komut.Parameters.AddWithValue("@p2", rctSikayet.Text);
-                komut.Parameters.AddWithValue("@p3", TXTid.Text);
+                komut.Parameters.AddWithValue("@p3", randevuNo);
                 etkilenenSatir = komut.ExecuteNonQuery();   // kaç satırın güncellendiğini döndürür
             }
 

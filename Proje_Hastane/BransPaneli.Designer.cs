@@ -90,6 +90,7 @@
             this.txtBransAd.Location = new System.Drawing.Point(103, 151);
             this.txtBransAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtBransAd.Name = "txtBransAd";
+            this.txtBransAd.MaxLength = 30;
             this.txtBransAd.Size = new System.Drawing.Size(176, 27);
             this.txtBransAd.TabIndex = 20;
             // 

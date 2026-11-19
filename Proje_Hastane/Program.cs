@@ -24,6 +24,16 @@ namespace Proje_Hastane
 
         static void BeklenmeyenHata(object sender, ThreadExceptionEventArgs e)
         {
+            // Veritabanı "metin sütuna sığmıyor" hatası (2628 / 8152): kutulardaki MaxLength bunu normalde
+            // engeller; yine de olursa kullanıcıya İngilizce teknik mesaj yerine anlaşılır bir açıklama gösterilir.
+            if (e.Exception is System.Data.SqlClient.SqlException sqlHatasi &&
+                (sqlHatasi.Number == 2628 || sqlHatasi.Number == 8152))
+            {
+                MessageBox.Show("Girdiğiniz bilgilerden biri izin verilen karakter sayısından uzun. Lütfen kısaltıp tekrar deneyin.",
+                    "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Hatanın hangi formda ve hangi metotta çıktığını da gösteriyoruz; hata bildiren kişi
             // bu bilgiyi verirse sorunun yeri hemen bulunur.
             string yer = e.Exception.TargetSite != null

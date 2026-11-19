@@ -57,6 +57,7 @@
             // 
             this.txtSoyad.Location = new System.Drawing.Point(206, 182);
             this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.MaxLength = 15;
             this.txtSoyad.Size = new System.Drawing.Size(131, 27);
             this.txtSoyad.TabIndex = 40;
             // 
@@ -73,6 +74,7 @@
             // 
             this.txtAd.Location = new System.Drawing.Point(206, 142);
             this.txtAd.Name = "txtAd";
+            this.txtAd.MaxLength = 15;
             this.txtAd.Size = new System.Drawing.Size(131, 27);
             this.txtAd.TabIndex = 38;
             // 
@@ -116,6 +118,7 @@
             // 
             this.txtSifre.Location = new System.Drawing.Point(206, 103);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.MaxLength = 15;
             this.txtSifre.Size = new System.Drawing.Size(131, 27);
             this.txtSifre.TabIndex = 36;
             // 
@@ -133,6 +136,7 @@
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(206, 229);
             this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBrans.Size = new System.Drawing.Size(131, 27);
             this.cmbBrans.TabIndex = 47;
             // 
